@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Diagrama de Projeto PMBOK + EAP</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Gerador de Diagrama de Projeto</h1>
+       <p class="sub">
+      Descreva seu projeto e receba um diagrama com a EAP (Estrutura Analítica do Projeto)
+      e os grupos de processos do PMBOK. Você pode escrever uma frase com as funcionalidades
+      depois de "com", ou detalhar o projeto por fases, com uma linha "Fase: Nome" seguida
+      das etapas, uma por linha, começando com "-". Não inclua dados pessoais ou sigilosos.
+    </p>
+
+    <div class="card">
+      <textarea id="txt" placeholder="Ex.: Aplicativo de delivery com cadastro de lojas, cardápio, pagamento online e painel de pedidos. Prazo de 6 meses, equipe de 5 pessoas, orçamento de R$ 50 mil."></textarea>
+      <div class="row">
+        <button id="go">Gerar diagrama</button>
+        <button id="dl" class="sec" style="display:none">Baixar imagem (PNG)</button>
+        <span id="msg"></span>
+      </div>
+    </div>
+
+    <div id="out" class="card">
+      <div class="scroll" id="svgbox"></div>
+    </div>
+  </main>
+
+  <script src="fases.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
